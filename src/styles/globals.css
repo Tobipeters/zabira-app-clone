@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@import "./tailwind-theme.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Geist, Helvetica, sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.react-code-input {
+  display: flex !important;
+  align-items: center;
+  gap: 1rem;
+}
+
+.react-code-input input {
+  font-family: inherit !important;
+  margin: 0 !important;
+  height: 46px !important;
+  width: calc(33.33% - 6.67px) !important;
+  /* width: 65px !important; */
+  border-radius: 0.5rem !important;
+  font-size: 0.875rem !important;
+  padding: 0.875rem 0.75rem !important;
+  background-color: transparent !important;
+  color: #121212 !important;
+  border: 1px solid #D8D8D8 !important;
+  text-align: center !important;
+  box-shadow: none !important;
+}
+
+.input_code_dannger input {
+  border-color: #ff3b30 !important;
+  background-color: #faf0ef !important;
+}
+
+@media screen and (max-width: 559px) {
+  .react-code-input {
+    gap: 0.125rem !important;
+  }
+
+  .react-code-input input {
+    /* height: 45px !important; */
+    width: calc(33.33% - 3.33px) !important;
+  }
+}
+
+.success-icon {
+  width: 100px;
+  height: 100px;
+  overflow: visible;
+}
+
+/* INNER pulse */
+.pulse-circle {
+  transform-origin: 70% 70%;
+  animation: pulse 2.5s ease-out infinite;
+}
+
+/* OUTER rotating arc */
+.rotate-ring {
+  stroke-dasharray: 100 160;
+  transform-origin: 50% 50%;
+  animation: rotate 2.5s linear infinite;
+  opacity: 0.6;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+  60% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+/* Rotate animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
