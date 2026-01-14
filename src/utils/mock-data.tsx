@@ -179,3 +179,42 @@ export const transactions: ITransaction[] = [
     date: "2025-08-01T03:34:52",
   },
 ];
+
+export const completionSteps = [
+  {
+    title: "Verify your email",
+    details: "Takes about 2 minutes",
+    imgUrl: "/images/icon/email-yellow.svg",
+    isCompleted: true,
+  },
+  {
+    title: "Verify phone number",
+    details: "Takes about 2 minutes",
+    imgUrl: "/images/icon/phone.svg",
+    isCompleted: false,
+  },
+  {
+    title: "Update personal information",
+    details: "Takes about 2 minutes",
+    imgUrl: "/images/icon/customer.svg",
+    isCompleted: false,
+  },
+  {
+    title: "Upgrade KYC",
+    details: "Takes about 2 minutes",
+    imgUrl: "/images/icon/customer-kyc.svg",
+    isCompleted: false,
+  },
+  {
+    title: "Enable 2FA",
+    details: "Takes about 2 minutes",
+    imgUrl: "/images/icon/2fa.svg",
+    isCompleted: false,
+  },
+    {
+    title: "Make your first transaction",
+    details: "Takes about 2 minutes",
+    imgUrl: "/images/icon/paper-plane.svg",
+    isCompleted: false,
+  },
+];

@@ -58,16 +58,17 @@ export const lightThemeOptions: ThemeOptions = {
 
           "& .MuiBackdrop-root": {
             // backgroundColor: "rgba(24, 119, 242, 0.2)",
-            backgroundColor: "rgba(0, 0, 0, 0.25)",
+            backgroundColor: "#rgba(10, 24, 32, 0.3)",
+            backdropFilter: "blur(5px)"
           },
 
           "@media (max-width: 576px)": {
             "& .MuiDialog-container": {
-              alignItems: "flex-end",
+              // alignItems: "flex-end",
             },
 
             "& .MuiPaper-root": {
-              borderRadius: "1.25rem 1.25rem 0 0",
+              // borderRadius: "1.25rem 1.25rem 0 0",
             },
           },
         },
@@ -379,54 +380,6 @@ export const lightThemeOptions: ThemeOptions = {
       },
     },
 
-    MuiStepper: {
-      styleOverrides: {
-        root: {
-          "& .MuiStep-root": {
-            "& .MuiStepLabel-iconContainer": {
-              "& .MuiSvgIcon-root": {
-                fill: "#F2F2F2",
-                zIndex: "2",
-
-                "& text": {
-                  fontSize: "0",
-                },
-              },
-            },
-
-            "& .MuiStepLabel-label": {
-              marginTop: "0.75rem",
-              fontWeight: 500,
-            },
-
-            "& .Mui-disabled": {
-              color: "#0D0D0D66",
-            },
-
-            "& .Mui-completed, .Mui-active, .Mui-completed.MuiStepLabel-label, .Mui-active.MuiStepLabel-label ":
-              {
-                color: "#1A1B1D",
-
-                "& .MuiSvgIcon-root": {
-                  fill: "#01A204",
-                },
-              },
-          },
-
-          "& .MuiStepConnector-root": {
-            "& .MuiStepConnector-line ": {
-              borderColor: "#F2F2F2",
-            },
-          },
-
-          "& .MuiStepConnector-root.Mui-completed, .MuiStepConnector-root.Mui-active":
-            {
-              "& .MuiStepConnector-line": {
-                borderColor: "#01A204",
-              },
-            },
-        },
-      },
-    },
+ 
   },
 };
