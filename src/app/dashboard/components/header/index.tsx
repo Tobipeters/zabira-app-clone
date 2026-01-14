@@ -1,12 +1,33 @@
-import { NotificationIcon } from "@/src/assets/svg";
+import { MenuIcon, NotificationIcon } from "@/src/assets/svg";
 import { CheckRateHelp } from "@/src/components";
 import { IconButton } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
-export const AppHeader = () => {
+interface IProps {
+  onToggleMenu: () => void;
+}
+
+export const AppHeader: React.FC<IProps> = ({ onToggleMenu }) => {
   return (
-    <header className="flex items-center bg-white h-17 lg:h-21 lg:shadow-[0px_33px_13px_rgba(176,176,176,0.01),0px_19px_11px_rgba(176,176,176,0.05),0px_8px_8px_rgba(176,176,176,0.09),0px_2px_5px_rgba(176,176,176,0.1)]">
-      <div className="hidden flex-col gap-1 md:flex">
+    <header className="flex items-center bg-white h-17 px-5 lg:pr-5.5 lg:pl-12 lg:h-21 lg:shadow-[0px_33px_13px_rgba(176,176,176,0.01),0px_19px_11px_rgba(176,176,176,0.05),0px_8px_8px_rgba(176,176,176,0.09),0px_2px_5px_rgba(176,176,176,0.1)]">
+      {/* Mobile only */}
+      <div className="inline-flex items-center gap-4 lg:hidden">
+        <IconButton onClick={onToggleMenu} className="p-1! rounded-full!">
+          <MenuIcon />
+        </IconButton>
+
+        <Link href={"/"}>
+          <Image
+            src="/images/Zabira-logo-black.svg"
+            alt="Zabira logo"
+            width={100}
+            height={21}
+          />
+        </Link>
+      </div>
+
+      <div className="hidden flex-col gap-1 lg:flex">
         <h3 className="text-sm text-[#1A1A1A] font-bold leading-[130%]">
           Hi Jacob 👋🏽
         </h3>

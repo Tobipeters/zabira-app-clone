@@ -6,6 +6,7 @@ interface IProps {
   title?: string;
   details?: React.JSX.Element | string;
   footerText?: React.JSX.Element | string;
+  className?: string
 }
 
 export const MainFrame: React.FC<IProps> = ({
@@ -13,9 +14,10 @@ export const MainFrame: React.FC<IProps> = ({
   title,
   details,
   footerText,
+  className
 }) => {
   return (
-    <main className="flex flex-col gap-6 w-full mt-23 pb-20 md:w-125 md:mx-auto">
+    <main className={`${className} flex flex-col gap-6 w-full py-30 md:w-125 md:mx-auto`}>
       <div className="flex flex-col gap-6 md:rounded-2xl md:bg-white md:p-9">
         <div className="flex flex-col gap-4 w-full">
           {title && (

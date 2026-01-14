@@ -27,6 +27,7 @@ export default function SignUp() {
 
   return (
     <MainFrame
+      className="mt-23"
       title="Create an account in 2 minutes!"
       footerText={
         <div className="text-center text-sm md:text-base">
