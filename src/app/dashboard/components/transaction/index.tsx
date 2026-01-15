@@ -102,6 +102,7 @@ export const TransactionHistory = () => {
     },
     {
       field: "date",
+      minWidth: 120,
       flex: 1,
       headerName: "Date",
       renderCell: ({ row }) => (

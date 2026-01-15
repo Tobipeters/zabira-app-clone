@@ -184,36 +184,42 @@ export const completionSteps = [
   {
     title: "Verify your email",
     details: "Takes about 2 minutes",
+    value: "email",
     imgUrl: "/images/icon/email-yellow.svg",
     isCompleted: true,
   },
   {
     title: "Verify phone number",
     details: "Takes about 2 minutes",
+    value: "phone",
     imgUrl: "/images/icon/phone.svg",
     isCompleted: false,
   },
   {
     title: "Update personal information",
     details: "Takes about 2 minutes",
+    value: "info",
     imgUrl: "/images/icon/customer.svg",
     isCompleted: false,
   },
   {
     title: "Upgrade KYC",
     details: "Takes about 2 minutes",
+    value: "kyc",
     imgUrl: "/images/icon/customer-kyc.svg",
     isCompleted: false,
   },
   {
     title: "Enable 2FA",
     details: "Takes about 2 minutes",
+    value: "2fa",
     imgUrl: "/images/icon/2fa.svg",
     isCompleted: false,
   },
-    {
+  {
     title: "Make your first transaction",
     details: "Takes about 2 minutes",
+    value: "transaction",
     imgUrl: "/images/icon/paper-plane.svg",
     isCompleted: false,
   },

@@ -2,8 +2,17 @@ import { completionSteps } from "@/src/utils";
 import { CircularProgressBox } from "../progress-box";
 import Image from "next/image";
 import { CaretRightIcon, CircleCheckIcon } from "@/src/assets/svg";
+import React from "react";
 
-export const CompleteProfile = () => {
+interface IProps{
+    handleStepClick: (value: string) => void
+}
+
+export const CompleteProfile:React.FC<IProps> = ({
+    handleStepClick
+}) => {
+
+
   return (
     <section className="flex flex-col gap-9 w-full">
       <div className="flex items-center justify-between">
@@ -22,6 +31,7 @@ export const CompleteProfile = () => {
         {completionSteps.map((step, id) => (
           <li
             key={id}
+            onClick={()=>handleStepClick(step.value)}
             className={`
                 ${
                   step.isCompleted
@@ -46,6 +56,8 @@ export const CompleteProfile = () => {
           </li>
         ))}
       </ul>
+
+   
     </section>
   );
 };

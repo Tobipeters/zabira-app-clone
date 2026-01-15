@@ -12,3 +12,6 @@ export const currencyFormatter = (
     // maximumFractionDigits: 2,
   }).format(value);
 };
+
+export const hasLetterAndDigit = (text: string) =>
+  /(?=.*[A-Za-z])(?=.*\d)/.test(text);

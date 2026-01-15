@@ -8,6 +8,7 @@ import {
 import * as React from "react";
 import { InputBox } from "./input.styles";
 import { useField } from "formik";
+import { ErrorInfoIcon } from "@/src/assets/svg";
 
 interface CustomInputProps extends StandardTextFieldProps {
   name: string;
@@ -161,7 +162,10 @@ const InputComponentWithFormik: React.FC<CustomInputProps> = ({
       />
 
       {meta.touched && meta.error && (
-        <FormHelperText className={"feedback"}>{meta.error}</FormHelperText>
+        <FormHelperText className={"feedback inline-flex items-center gap-1 font-semibold!"}>
+          <ErrorInfoIcon />
+          {meta.error}
+        </FormHelperText>
       )}
     </InputBox>
   );

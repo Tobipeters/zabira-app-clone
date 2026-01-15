@@ -57,7 +57,7 @@ export const WalletSection = () => {
 
   return (
     <section className="grid grid-cols-12 gap-6 lg:p-6 bg-white rounded-2xl">
-      <div className="col-span-12 lg:col-span-4 ">
+      <div className="col-span-12 lg:col-span-5 xl:col-span-4">
         <div className="bg-[#EBF0FF] border border-[#1A1A1A14] rounded-xl lg:bg-transparent">
           <div className="flex flex-col gap-6 py-4 px-6 rounded-xl w-full border border-transparent bg-[#0044EE] lg:bg-[#EBF0FF] lg:border-[#D6E2FF]">
             <div className="inline-flex flex-col gap-3">
@@ -133,7 +133,7 @@ export const WalletSection = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block col-span-12 md:col-span-6 lg:col-span-8 ">
+      <div className="hidden lg:block col-span-12 lg:col-span-7 xl:col-span-8">
         <TradedAssets />
       </div>
 

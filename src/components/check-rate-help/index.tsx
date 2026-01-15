@@ -6,7 +6,7 @@ export const CheckRateHelp = () => {
     <div className="inline-flex">
       <ZaButton
         mode="secondary"
-        className="rounded-[50px_0_0_50px]! text-sm! lg:text-base! px-2! lg:px-3! bg-[#FCFCFC]! lg:bg-white!"
+        className="rounded-[50px_0_0_50px]! text-sm! xl:text-base! px-2! xl:px-3! bg-[#FCFCFC]! lg:bg-white!"
         text={
           <>
             <CalculatorIcon />
@@ -16,7 +16,7 @@ export const CheckRateHelp = () => {
       />
       <ZaButton
         mode="secondary"
-        className="rounded-[0_50px_50px_0]! text-sm! lg:text-base! px-2! lg:px-3! bg-[#FCFCFC]! lg:bg-white!"
+        className="rounded-[0_50px_50px_0]! text-sm! xl:text-base! px-2! xl:px-3! bg-[#FCFCFC]! lg:bg-white!"
         text={
           <>
             <HeadphoneIcon />

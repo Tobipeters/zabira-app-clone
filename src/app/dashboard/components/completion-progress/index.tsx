@@ -1,23 +1,33 @@
 "use client";
 import { ArrowRightIcon, CaretRightIcon } from "@/src/assets/svg";
 import { ZaButton } from "@/src/components";
-import {  IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { ZaDialog } from "../dialog";
 import React from "react";
 import { CompleteProfile } from "../complete-profile";
 import { CircularProgressBox } from "../progress-box";
+import { VerifyPhone } from "../verify-phone";
+import { PersonalInformation } from "../personal-info";
 
 export const CompletionProgress = () => {
   const [openCompletion, setOpenCompletion] = React.useState<boolean>(false);
+  const [openVerify, setOpenVerify] = React.useState<boolean>(false);
+  const [selectedValue, setSelectedValue] = React.useState<string>("");
 
   const toggleOpenCompletion = () => {
     setOpenCompletion(!openCompletion);
   };
 
+  const handleStepClick = (value: string) => {
+    toggleOpenCompletion();
+    setSelectedValue(value);
+    setOpenVerify(true);
+  };
+
   return (
     <section className="flex gap-2 items-start lg:items-center justify-between w-full p-4 rounded-xl bg-[#EBF5FF] border-2 border-transparent lg:border-[#A3D4FF]">
       <div className="flex items-center gap-4 lg:gap-6">
-      <CircularProgressBox text="4/5" progress={80} />
+        <CircularProgressBox text="4/5" progress={80} />
 
         <div className="inline-flex flex-col gap-1.5">
           <h4 className="text-base text-[#00298F] font-bold leading-[124%] tracking-[-0.012em]">
@@ -52,7 +62,17 @@ export const CompletionProgress = () => {
           onClose: toggleOpenCompletion,
         }}
       >
-        <CompleteProfile />
+        <CompleteProfile handleStepClick={handleStepClick} />
+      </ZaDialog>
+
+      <ZaDialog
+        dialogProps={{
+          open: openVerify,
+          onClose: () => setOpenVerify(false),
+        }}
+      >
+        {selectedValue === "phone" && <VerifyPhone />}
+        {selectedValue === "info" && <PersonalInformation />}
       </ZaDialog>
     </section>
   );
