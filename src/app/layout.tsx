@@ -5,6 +5,7 @@ import ThemeRegistry from "../themes/ThemeRegistry";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/swiper-bundle.css";
+import { ZaLoader } from "../components/loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable}  antialiased`}>
       <body>
-        <ThemeRegistry>{children}</ThemeRegistry>
+        <ThemeRegistry>
+          <ZaLoader />
+          {children}
+        </ThemeRegistry>
       </body>
     </html>
   );
