@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between z-10 absolute bg-[#ffffff]/65 lg:bg-[#F4F4F5]/65 backdrop-blur-[2px] top-0 left-0 right-0 px-6 pt-6 lg:px-0 lg:pt-0 md:h-17">
+    <header className="flex items-center justify-between z-10 absolute bg-[#ffffff]/65 lg:bg-[#F4F4F5]/65 backdrop-blur-[2px] top-0 left-0 right-0 px-6 pt-6 lg:px-0 lg:pr-4 lg:pt-0 md:h-17">
       <Link href={"/"} className="lg:hidden">
         <Image
           src="/images/Zabira-logo-black.svg"
