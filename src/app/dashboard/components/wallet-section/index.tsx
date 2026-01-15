@@ -53,7 +53,7 @@ const walletActions = [
 ];
 
 export const WalletSection = () => {
-  const isDesktop = useMediaQuery("798px");
+  const tabletDesktopDevices = useMediaQuery("(min-width:767px)");
 
   return (
     <section className="grid grid-cols-12 gap-6 lg:p-6 bg-white rounded-2xl">
@@ -64,7 +64,7 @@ export const WalletSection = () => {
               <div className="flex items-center justify-between">
                 <h5 className="text-base text-[#FFFFFFB2] lg:text-[#1A1A1A]/70 font-semibold leading-[124%] tracking-[-0.012em] inline-flex items-center gap-2">
                   Total Balance{" "}
-                  <NoEyeIcon bg={isDesktop ? "#A1A1AA" : "white"} />
+                  <NoEyeIcon bg={!tabletDesktopDevices ? "white" : "#A1A1AA" } />
                 </h5>
                 <span className="inline-flex lg:hidden items-center gap-0.5 text-white font-semibold bg-white/18 border border-white/26 rounded-[50px] py-1 pl-3 pr-1.5">
                   USD
